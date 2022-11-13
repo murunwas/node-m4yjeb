@@ -1,4 +1,7 @@
 
 const bot = require("./utils")
+const {getData} = require("./utils/golden")
 
-bot.dd()
+//ot.getData()
+
+getData()
