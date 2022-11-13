@@ -29,9 +29,9 @@ class Bot {
 
   async dd() {
     let df = await this.getData();
-    df.plot().renderImage("my-chart.png");
-    //df = this.calcEma(df, 20);
-    //console.log(df.tail(12).toString());
+    //df.plot().renderImage("my-chart.png");
+    df = this.calcEma(df, 20);
+    console.log(df.tail(12).toString());
     //log(this.df.getSeries('name').toArray())
     //this.df.plot().renderImage("my-chart.png");
     //     var subsetToPlot = this.df.subset(["name", "sex"]);
