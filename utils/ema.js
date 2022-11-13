@@ -21,6 +21,7 @@ class Bot {
     this.low = map(this.data, "low");
     this.high = map(this.data, "high");
     this.time = map(this.data, "time");
+    this.open = map(this.data, "open");
   }
 
   #calcEma(period = 20) {
@@ -44,6 +45,19 @@ class Bot {
         log(latestEma50[i].toFixed(0)==ema200[i].toFixed(0))
     })
   }
+
+  test(){
+    let m =this.data.reduce((acc,curr)=>{
+      if(curr.close-curr.open>300){
+        acc.push({
+          date:dayjs(curr.time).format("DD-MM-YYYY HH:mm"),
+          price:curr.close-curr.open
+        })
+      }
+      return acc;
+    },[])
+    log(m)
+  }
 }
 
 const getData = async () => {
@@ -59,7 +73,7 @@ const getData = async () => {
     close: d[4] * 1,
     volume: d[5] * 1,
   }));
-  new Bot(formattedData).execute();
+  new Bot(formattedData).test();
 };
 getData()
 // let arr=[1,2,3,4];
