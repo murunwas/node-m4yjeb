@@ -48,7 +48,8 @@ class Bot {
 
   test(){
     let m =this.data.reduce((acc,curr)=>{
-      if(curr.close-curr.open>300){
+      //log(curr.close-curr.open,dayjs(curr.time).format("DD-MM-YYYY HH:mm"))
+      if(curr.close-curr.open>5){
         acc.push({
           date:dayjs(curr.time).format("DD-MM-YYYY HH:mm"),
           price:curr.close-curr.open
@@ -61,7 +62,7 @@ class Bot {
 }
 
 const getData = async () => {
-  const SYMBOL = "BTC/USDT";
+  const SYMBOL = "BNB/USDT";
   const INTERVAL = "15m";
   let binance = new ccxt.binance();
   let data = await binance.fetchOHLCV(SYMBOL, INTERVAL);

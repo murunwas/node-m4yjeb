@@ -15,6 +15,7 @@
     "dayjs": "^1.11.6",
     "linq": "^3.2.4",
     "lodash": "^4.17.21",
-    "technicalindicators": "^3.1.0"
+    "technicalindicators": "^3.1.0",
+    "ws": "^8.11.0"
   }
 }
