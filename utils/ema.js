@@ -49,7 +49,7 @@ class Bot {
   test(){
     let m =this.data.reduce((acc,curr)=>{
       //log(curr.close-curr.open,dayjs(curr.time).format("DD-MM-YYYY HH:mm"))
-      if(curr.close-curr.open>5){
+      if(curr.close-curr.open>3){
         acc.push({
           date:dayjs(curr.time).format("DD-MM-YYYY HH:mm"),
           price:curr.close-curr.open

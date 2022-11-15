@@ -9,6 +9,7 @@
     "@plotex/render-dom": "^1.0.21",
     "@plotex/render-image": "^1.0.21",
     "ccxt": "^2.1.71",
+    "danfojs-node": "^1.1.2",
     "data-forge": "^1.9.6",
     "data-forge-fs": "^0.0.9",
     "data-forge-plot": "^1.0.2",
